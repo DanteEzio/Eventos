@@ -39,6 +39,14 @@ header .navbar .container .offcanvas .offcanvas-body .navbar-nav .nav-item a {
   font-family: "Go Medium";
   font-weight: normal;
 }
+header .navbar .container .offcanvas .offcanvas-body .navbar-nav .nav-item button {
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.55) !important;
+}
+header .navbar .container .offcanvas .offcanvas-body .navbar-nav .nav-item button:hover {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
 header .navbar .container .offcanvas .offcanvas-body .navbar-adicional .nav-item a {
   font-size: 12px;
   font-family: "Go Medium";
@@ -660,13 +668,15 @@ main .laptops .caracteristicas-5 .container .col .card .card-body button {
 main .laptops .caracteristicas-5 .container .col .card .card-body button:hover {
   background-color: #86d103;
 }
-main .modalCarrito {
+main .carritoCompras {
+  background-color: #1a1a1a;
+}
+main .carritoCompras .modalCarrito {
   padding: 20px;
   width: 50%;
-  background-color: #1a1a1a;
   display: none;
 }
-main .modalCarrito .carritoHeader h3 {
+main .carritoCompras .modalCarrito .carritoHeader h3 {
   color: #76b900;
   font-family: "GeForce-Bold";
   padding-bottom: 10px;
@@ -674,16 +684,16 @@ main .modalCarrito .carritoHeader h3 {
   font-size: 28px;
   line-height: 1em;
 }
-main .modalCarrito .carritoHeader button {
+main .carritoCompras .modalCarrito .carritoHeader button {
   background: none;
   border: none;
   color: #76b900;
   margin-top: -15px;
 }
-main .modalCarrito .carritoHeader button:hover {
+main .carritoCompras .modalCarrito .carritoHeader button:hover {
   color: #86d103;
 }
-main .modalCarrito .carrito-contenedor table thead tr th {
+main .carritoCompras .modalCarrito .carrito-contenedor table thead tr th {
   font-weight: bold;
   font-size: 16px;
   line-height: 1em;
@@ -693,7 +703,7 @@ main .modalCarrito .carrito-contenedor table thead tr th {
   word-wrap: break-word;
   box-sizing: border-box;
 }
-main .modalCarrito .carrito-contenedor table tbody tr td {
+main .carritoCompras .modalCarrito .carrito-contenedor table tbody tr td {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.25em;
@@ -704,31 +714,60 @@ main .modalCarrito .carrito-contenedor table tbody tr td {
   box-sizing: border-box;
   min-width: 148px;
 }
-main .modalCarrito .carrito-contenedor table tbody tr td img {
+main .carritoCompras .modalCarrito .carrito-contenedor table tbody tr td img {
   box-shadow: 0 0 10px 2px rgba(117, 185, 0, 0.7607843137);
 }
-main .modalCarrito .carrito-contenedor table tbody tr td button {
+main .carritoCompras .modalCarrito .carrito-contenedor table tbody tr td button {
   margin: 0 3px;
 }
-main .modalCarrito .carrito-contenedor table tbody tr td .incrementar {
-  background-color: rgb(0, 102, 255);
+main .carritoCompras .modalCarrito .carrito-contenedor table tbody tr td .incrementar {
+  background-color: #0d6efd;
   color: #eee;
   border-radius: 0.2em;
   border: none;
 }
-main .modalCarrito .carrito-contenedor table tbody tr td .incrementar:hover {
+main .carritoCompras .modalCarrito .carrito-contenedor table tbody tr td .incrementar:hover {
   background-color: rgb(4, 0, 255);
 }
-main .modalCarrito .carrito-contenedor table tbody tr td .decrementar {
-  background-color: rgb(255, 0, 0);
+main .carritoCompras .modalCarrito .carrito-contenedor table tbody tr td .decrementar {
+  background-color: #dc3545;
   color: #eee;
   border-radius: 0.2em;
   border: none;
 }
-main .modalCarrito .carrito-contenedor table tbody tr td .decrementar:hover {
+main .carritoCompras .modalCarrito .carrito-contenedor table tbody tr td .decrementar:hover {
   background-color: rgb(179, 6, 6);
 }
-main .modal-active {
+main .carritoCompras .modalCarrito .carrito-contenedor table tbody th {
+  color: #76b900;
+  font-family: "DINPro-Regular";
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 1em;
+}
+main .carritoCompras .modalCarrito .carrito-contenedor table tfoot th {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: "DINPro-Regular";
+  color: #fff;
+  text-align: center;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+main .carritoCompras .modalCarrito .carrito-contenedor table tfoot td button {
+  background-color: #dc3545;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: "DINPro-Regular";
+  color: #fff;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+main .carritoCompras .modalCarrito .carrito-contenedor table tfoot td button:hover {
+  background-color: #1a1a1a;
+}
+main .carritoCompras .modal-active {
   display: block;
 }
 main .tGraficas .foto-principal {
