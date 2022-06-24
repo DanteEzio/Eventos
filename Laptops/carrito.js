@@ -1,24 +1,39 @@
-import { data } from "./stock.js";
+import { laptops } from "./baseDeDatos.js";
 
-
-// Definimos nuestro carrito donde vamos a guardar nuestros productos
 let carritoCompras = [];
 
-export const carritoLaptop = (itemId) => {
-    const contenedorCarrito = document.getElementById("carritoContenedor")
+export const carritoDeCompras = (productoID) => {
+  let productoEnCarrito = " ";
 
-    const renderProductoCarrito = () => {
-        let producto = data.find((producto) => producto.id == itemId);
-        carritoCompras.push(producto);
+  const renderProductoCarrito = () => {
+    let producto = laptops.find((producto) => producto.id == productoID);
+    carritoCompras.push(producto);
 
-        producto.cantidad = 1;
+    // producto.stock = 1;
 
-        let div = document.createElement("div");
-        div.classList.add("productoEnCarrito");
-        div.innerHTML = ``;
+    productoEnCarrito = `
+    <tr>
+      <td>
+        <img
+        src="${producto.img}"
+        class="card-img-top"
+        alt="..."
+        style="width: 100px; height: 70px"
+        />
+      </td>
+      <td>${producto.nombre}</td>
+      <td>1</td>
+      <td>
+        <button class="incrementar"><i class="fa-solid fa-plus"></i></button>
+        <button class="decrementar"><i class="fa-solid fa-minus"></i></button>
+        </td>
+      <td>${producto.pDescuento}</td>
+    </tr>
+    
+    `;
 
-        contenedorCarrito.appendChild(div);
-    }
+    document.querySelector("#pAgregados").innerHTML += productoEnCarrito;
+  };
 
-    renderProductoCarrito()
-}
+  renderProductoCarrito();
+};

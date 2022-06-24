@@ -845,6 +845,103 @@ main {
     }
   }
 
+  .modalCarrito {
+    padding: 20px;
+    width: 50%;
+    background-color: #1a1a1a;
+    display: none;
+
+    .carritoHeader {
+      h3 {
+        color: #76b900;
+        font-family: "GeForce-Bold";
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 28px;
+        line-height: 1em;
+      }
+      button {
+        background: none;
+        border: none;
+        color: #76b900;
+        margin-top: -15px;
+
+        &:hover {
+          color: #86d103;
+        }
+      }
+    }
+
+    .carrito-contenedor {
+      table {
+        thead {
+          tr {
+            th {
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 1em;
+              font-family: "DINPro-Regular";
+              color: #fff;
+              text-align: center;
+              word-wrap: break-word;
+              box-sizing: border-box;
+              // padding-bottom: 15px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 1.25em;
+              font-family: "DINPro-Light";
+              color: #fff;
+              text-align: center;
+              word-wrap: break-word;
+              box-sizing: border-box;
+              min-width: 148px;
+
+              img {
+                box-shadow: 0 0 10px 2px #75b900c2;
+              }
+
+              button {
+                margin: 0 3px;
+              }
+
+              .incrementar {
+                background-color: rgb(0, 102, 255);
+                color: #eee;
+                border-radius: 0.2em;
+                border: none;
+
+                &:hover {
+                  background-color: rgb(4, 0, 255);
+                }
+              }
+
+              .decrementar {
+                background-color: rgb(255, 0, 0);
+                color: #eee;
+                border-radius: 0.2em;
+                border: none;
+
+                &:hover {
+                  background-color: rgb(179, 6, 6);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-active {
+    display: block;
+  }
+
   // *** TARJETAS GRÁFICAS ***
   .tGraficas {
     .foto-principal {

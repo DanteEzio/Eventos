@@ -1,5 +1,5 @@
-//Esta es mi base de datos de productos
-let data = [
+//Esta es mi base de datos
+let laptops = [
   {
     id: 1,
     img: "../imagenes/LAPTOP-1.webp",
@@ -80,7 +80,7 @@ let data = [
   {
     id: 8,
     img: "../imagenes/LAPTOP-9.webp",
-    nombre: "Laptop AORUS 17 YE5",
+    nombre: "Laptop AORUS 17 YE5 17.3'",
     descripcion:
       "Laptop AORUS 17 YE5 17.3” Full HD, Intel Core i7-12700H 2.30GHz, 32GB, 1TB SSD, NVIDIA GeForce RTX 3080 Ti, Windows 11 Home 64-bit, Español, Negro, Procesador rápido ",
     sku: "YE5-74LA544SH",
@@ -90,4 +90,4 @@ let data = [
   },
 ];
 
-export { data };
+export { laptops };

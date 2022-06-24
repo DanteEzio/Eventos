@@ -1,14 +1,10 @@
-// Aqui estamos importando nuestros productos de la BD
-import { data } from "./stock.js";
-import { carritoLaptop } from "./carrito.js";
+import { laptops } from "./baseDeDatos.js";
+import { carritoDeCompras } from "./carrito.js";
 
-// Al principio la variable data es solo nuestro iterador
-const mostrarProductos = (data) => {
-
+const cargarProductos = (laptops) => {
   let cards = " ";
 
-  data.forEach((item) => {
-
+  laptops.forEach((item) => {
     cards = `
       <div class="col">
               <div class="card">
@@ -30,25 +26,23 @@ const mostrarProductos = (data) => {
                   <h6><s>$${item.pReal.toLocaleString()} MXN</s></h6>
                   <h6>$${item.pDescuento.toLocaleString()} MXN</h6>
                   <p>Disponibles: ${item.stock}pzs.</p>
-                  <button type="button" class="btn btn-secondary" id=boton${
+                  <button type="button" class="btn btn-secondary agregarCarrito" id=boton${
                     item.id
                   }>
                     Añadir al carrito <i class="fa-solid fa-cart-shopping"></i>
                   </button>
                 </div>
               </div>
-       </div>    
+       </div>
     `;
-    document.querySelector("#contenedorLaptops").innerHTML += cards
-    
-    const boton = document.getElementById(`boton${item.id}`);
+    document.querySelector("#contenedorLaptops").innerHTML += cards;
 
-    boton.addEventListener("click", () => {
-      carritoLaptop(item.id)
-      alert(`Se agrego ${item.nombre} al carrito de compras`);
-    })
+    let boton = document.getElementById(`boton${item.id}`);
+    boton.addEventListener("click", ()=> {
+      carritoDeCompras(item.id);
+      alert(`Se agrego ${item.nombre} al carrito`);
+    });
   });
 };
 
-mostrarProductos(data)
-
+cargarProductos(laptops);
